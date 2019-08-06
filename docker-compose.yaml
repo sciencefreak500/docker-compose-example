@@ -1,0 +1,8 @@
+version: '3'
+services:
+  webbackend:
+    build: ./webbackend/.
+  webfrontend:
+    build: ./webfrontend/.
+    ports:
+      - "4567:4200"
