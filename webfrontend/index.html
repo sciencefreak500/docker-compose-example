@@ -1,1 +1,28 @@
-the website
+<!DOCTYPE html>
+<html>
+<head>
+	<title>website</title>
+</head>
+<body>
+
+<script type="text/javascript">
+	function getRandomNumber() {
+		var xhttp = new XMLHttpRequest();
+		xhttp.onreadystatechange = function() {
+			if (this.readyState == 4 && this.status == 200) {
+				document.getElementById("random-result").innerHTML = this.responseText;
+			}
+		}
+		xhttp.open("GET", "https://api.musasworld.org/random", true);
+		xhttp.send();
+	}
+</script>
+
+
+	<div>
+		<p>the wesbite</p>
+		<button onclick="getRandomNumber()">Random Number!</button>
+		<p id="random-result"></p>
+	</div>
+</body>
+</html>

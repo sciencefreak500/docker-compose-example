@@ -2,6 +2,8 @@ version: '3'
 services:
   webbackend:
     build: ./webbackend/.
+    ports:
+      - "8090:3000"
   webfrontend:
     build: ./webfrontend/.
     ports:
